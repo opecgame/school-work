@@ -1,0 +1,231 @@
+body {
+  text-align: center;
+  background: url(../images/bg.jpg);
+  font-family: 'IBM Plex Sans Thai', Arial, serif;
+}
+
+#game {
+  position: relative;
+  width: 860px;
+  height: 1080px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  padding: 5px;
+  /*border           : 1px solid #666;*/
+  border-radius: 10px;
+  background: #66dbf5;
+  /*background       : #232 url(../images/table.jpg);*/
+  box-shadow: 0 -1px 0 #999, 0 1px 0 #999, inset 0 1px 6px #000;
+  justify-content: center;
+  align-items: center;
+}
+
+#cards {
+  position: relative;
+  width: 980px;
+  height: 400px;
+}
+
+/* Define the 3D perspective view and dimension of each card. */
+.card {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  transition: all .3s;
+  perspective: 600px;
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all .3s;
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+.front {
+  background: #999 url("https://media.discordapp.net/attachments/844047820712837172/918810205045796874/whoisthat.png");
+  background-size: cover;
+}
+
+.back {
+  transform: rotate3d(0, 1, 0, -180deg);
+}
+
+.card-flipped .front {
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.card-flipped .back {
+  transform: rotate3d(0, 1, 0, 0deg);
+}
+
+.card-removed {
+  opacity: 0;
+}
+
+/*Each image from the image sprite sheet*/
+.image1 {
+  background: #fff url("/images/post/1.png");
+  background-size: 200px;
+  background-position: center;
+}
+
+.image2 {
+  background: #fff url("/images/post/2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.image3 {
+  background: #fff url("/images/post/3.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.image4 {
+  background: #fff url("/images/post/4.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.image5 {
+  background: #fff url("/images/post/5.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.image6 {
+  background: #fff url("/images/post/6.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.image7 {
+  background: #fff url("/images/post/7.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.image8 {
+  background: #fff url("/images/post/8.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.image9 {
+  background: #fff url("/images/post/9.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.image10 {
+  background: #fff url("/images/post/10.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Styles for game over popup */
+#popup {
+  font-family: 'IBM Plex Sans Thai', serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: 0px 1px 2px #fff;
+
+  color: #222;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  background: rgba(0, 0, 0, .5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all .5s ease-in;
+}
+
+#popup h1 {
+  font-weight: 400;
+}
+
+#popup-box {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  background: #ccc url(../images/You-Won.jpg);
+
+  border-radius: 10px;
+
+  box-shadow: 0 5px 5px #333;
+
+  display: box;
+  box-pack: center;
+  box-align: center;
+
+  transition: all .5s ease-in;
+}
+
+#popup-box small {
+  font-size: .6em;
+}
+
+/**
+ * Styles to hide the popup box
+ */
+#popup.hide {
+  background: rgba(0, 0, 0, 0);
+  visibility: hidden;
+}
+
+#popup.hide #popup-box {
+  margin-top: -800px;
+}
+
+
+.ribbon.hide {
+  display: none;
+}
+
+.ribbon {
+  float: left;
+  position: absolute;
+  left: -7px;
+  top: 165px;
+  z-index: 0;
+
+  font-size: .5em;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.ribbon-body {
+  height: 14px;
+  background: #ca3d33;
+  padding: 6px;
+  z-index: 100;
+  box-shadow: 2px 2px 0 rgba(150, 120, 70, .4);
+  border-radius: 0 5px 5px 0;
+
+  color: #fff;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, .3);
+}
+
+.triangle {
+  position: relative;
+  height: 0px;
+  width: 0;
+  left: -5px;
+  top: -32px;
+  border-style: solid;
+  border-width: 6px;
+  border-color: transparent #882011 transparent transparent;
+  z-index: -1;
+}
