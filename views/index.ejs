@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&display=swap" rel="stylesheet">
+  <title>OpecZ CH & Chenchoy | Home</title>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+  <link rel="stylesheet" href="assets/css/opecz.css">
+  <link rel="stylesheet" href="assets/css/animated.css">
+  <link rel="stylesheet" href="assets/css/chenchoy.css">
+</head>
+
+<body>
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <a class="logo">
+              <img src="images/pkwlogo.png" alt="PKW Logo" height="65px" width="60px">
+            </a>
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">หน้าแรก</a></li>
+              <li class="scroll-to-section"><a href="#member">สมาชิกในกลุ่ม</a></li>
+              <li>
+                <% if (member) { %>
+                <div class="scroll-to-section"><a><i class="fad fa-user"></i><%= member.name %></a></div>
+              </li>
+              <li>
+                <div class="scroll-to-section"><a href="/logout">Log Out</a></div>
+                <%  } else { %>
+                <div class="gradient-button"><a href="/login"><i class="fa fa-sign-in-alt"></i> Log in</a></div>
+                <% } %>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>เดอะ <em>นาฎศิลป์</em></h2>
+                    งานนี้เป็นส่วนหนึ่งของรายวิชา นาฏศิลป์ ศ23103
+                    <p>เสนอ คุณครูนวพร หล่อประเสริฐชัย</p>
+                    <% if (!member) { %>
+                    <div class="gradient-button"><a href="/login"><i class="fa fa-sign-in-alt"></i> เข้าสู่ระบบ</a>
+                    </div>
+                    <% } else { %>
+                      <div class="gradient-button"><a href="/game"><i class="fa fa-sign-in-alt"></i> เล่นเกมเลย !</a>
+                      </div>
+                      <% } %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="images/post/11.png" alt="" width="300px">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="member" class="the-clients">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading">
+            <h4>รายชื่อ <em>สมาชิก</em> ในกลุ่ม</h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-7 align-self-center">
+                  <div class="menu">
+                    <div class="first-thumb active">
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>กฤติพงศ์ ทรงยศ</h4>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Developer</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <span class="rating">เลขที่ 1</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>ชณินทร ไชยพงค์</h4>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Developer</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <span class="rating">เลขที่ 4</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>ภูริทัต วงศ์ประทุม</h4>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Creative</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <span class="rating">เลขที่ 13</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>วีรภัทร ทองลิ้ม</h4>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Concept Design</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <span class="rating">เลขที่ 16</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>สรวิชญ์ ไชโย</h4>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Artist</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <span class="rating">เลขที่ 22</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>ภคภรณ์ ส่งแสง</h4>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Group Manager</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <span class="rating">เลขที่ 36</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>อนงค์นาถ จันประสงค์</h4>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Concept Design</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <span class="rating">เลขที่ 39</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>อัญชิสา ทวีบวรมงคล</h4>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Concept Design</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <span class="rating">เลขที่ 40</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img src="assets/images/heading-line-dec.png" alt="" style="width: 680px; height: 5px;">
+                    <div class="last-thumb">
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>คเชนทร์ชัย ใจกล้า </h4>
+                            <h6>(ผู้ช่วย)</h6>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Co-Developer</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <span class="rating">เลขที่ 2 ม.3/3</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-5">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="client-content">
+                              <div class="down-content">
+                                <img src="images/members/01.jpg" alt="">
+                                <div class="right-content">
+                                  <h4>กฤติพงศ์ ทรงยศ</h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <div class="down-content">
+                                  <img src="images/members/04.jpg" alt="">
+                                  <div class="right-content">
+                                    <h4>ชณินทร ไชยพงค์</h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <div class="down-content">
+                                  <img src="images/members/13.png" alt="">
+                                  <div class="right-content">
+                                    <h4>ภูริทัต วงศ์ประทุม</h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <div class="down-content">
+                                  <img src="images/members/16.jpg" alt="">
+                                  <div class="right-content">
+                                    <h4>วีรภัทร ทองลิ้ม</h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <div class="down-content">
+                                  <img src="images/members/22.jpg" alt="">
+                                  <div class="right-content">
+                                    <h4>สรวิชญ์ ไชโย</h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <div class="down-content">
+                                  <img src="images/members/37.jpg" alt="">
+                                  <div class="right-content">
+                                    <h4>ภคภรณ์ ส่งแสง</h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <div class="down-content">
+                                  <img src="images/members/39.jpg" alt="">
+                                  <div class="right-content">
+                                    <h4>อนงค์นาถ จันประสงค์</h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <div class="down-content">
+                                  <img src="images/members/40.jpg" alt="">
+                                  <div class="right-content">
+                                    <h4>อัญชิสา ทวีบวรมงคล</h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </li>
+                    <li></li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <div class="down-content">
+                                  <img src="images/members/99.png" alt="">
+                                  <div class="right-content">
+                                    <h4>คเชนทร์ชัย ใจกล้า (ผู้ช่วย)</h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="copyright-text">
+            <p>Copyright © 2021-2026 OpecZ CH & Chenchoy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
